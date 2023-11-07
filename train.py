@@ -67,4 +67,4 @@ if __name__ == "__main__":
         mlflow.log_metric("mae", mae)
 
         #mlflow.sklearn.log_model(lr, "model")
-        mlflow.sklearn.log_model(lr, "model", registered_model_name="ElasticnetWineModel")
+        mlflow.sklearn.log_model(lr, "model", input_example=train_x.iloc[[0]], registered_model_name="ElasticnetWineModel")
